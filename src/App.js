@@ -90,7 +90,7 @@ displayFaceBox = (box) => {
     app.models.predict(Clarifai.FACE_DETECT_MODEL,this.state.input)
     .then(response => {
       if(response){
-        fetch('http://localhost:3000/image',{
+        fetch('https://lit-basin-19759.herokuapp.com/image',{
           method:'put',
       headers: {'Content-Type': 'application/json'},
       body:JSON.stringify({
